@@ -1,0 +1,34 @@
+.modalContainer{
+    padding: 20px;
+    min-width: 30rem;
+    z-index: 2;
+    background: #d5c7bc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border: 0;
+    animation: slide-down-fade-in 0.5s ease-out forwards;
+   
+}
+
+.modalContainer::backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+ 
+
+@keyframes slide-down-fade-in{
+    0%{
+        opacity: 0;
+        transform: translateY(-50%)
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%)
+    }
+
+}
